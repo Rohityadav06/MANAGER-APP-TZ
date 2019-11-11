@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "584861873712",
+    "firebase_url": "https://manager-push-notification.firebaseio.com",
+    "project_id": "manager-push-notification",
+    "storage_bucket": "manager-push-notification.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584861873712:android:14cbd7f1a77e8996",
+        "android_client_info": {
+          "package_name": "com.nrusingh.manager_thinkzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584861873712-e7ellao2af8hjivr6jkmfnk7qarjcpii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARZlSjvK-izyyXbndGd46sFznXWz5dX1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584861873712-e7ellao2af8hjivr6jkmfnk7qarjcpii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

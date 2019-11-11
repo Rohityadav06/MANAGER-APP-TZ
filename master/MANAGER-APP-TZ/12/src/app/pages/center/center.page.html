@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar color="gray">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+        <ion-text color="light">
+          <ion-text color="light" class="fw700">
+            {{ _centername }}
+            <br>
+            <span class="text10">
+              {{ _date}}
+            </span> 
+          </ion-text>
+        </ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-white">
+  <ion-item>
+    <ion-label><h2 align="center" >Daily Information</h2></ion-label>
+  </ion-item>
+  <!-- Daily Information -->
+  <ion-slides [options]= "{ slidesPerView: 2, spaceBetween: 0, centeredSlides: false }">
+    <ion-slide>
+      <ion-card [routerLink]="'/feedback'" routerDirection="forward" class="bg-white">
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <img src="/assets/img/center/dailyinfo.png" alt="" />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-item>
+          <ion-label><h2 align="center" >Feedback</h2></ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+    
+
+  <!-- <ion-item (click)="takePicture()" lines="none"></ion-item>
+  <ion-item (click)="getGeolocation()" lines="none"></ion-item> -->
+
+  <!-- Monthly Information -->
+  <ion-item>
+    <ion-label><h2 align="center" >Monthly Information</h2></ion-label>
+  </ion-item>
+  <!-- vertical slider -->
+  <ion-slides [options]= "{ slidesPerView: 2, spaceBetween: 0, centeredSlides: false }">
+    <ion-slide>
+      <ion-card [routerLink]="'/payment'" routerDirection="forward" class="bg-white">
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <img src="/assets/img/center/payementinfo.png" alt="" class="payementinfo"  width="10" height="10" />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-item>
+          <ion-label><h2 align="center" >Payement Info</h2></ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card [routerLink]="'/assessment'" routerDirection="forward" class="bg-white" >
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <img src="/assets/img/center/assessment.jpg" alt=""  />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-item>
+          <ion-label><h2 align="center" >Assessment</h2></ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-card [routerLink]="'/community'" routerDirection="forward" class="bg-white">
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <img src="/assets/img/center/community.png" alt=""  />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-item>
+          <ion-label><h2 align="center" >Community Visit</h2></ion-label>
+        </ion-item>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
+    
+
+  <!-- Issues -->
+  <ion-item>
+    <ion-label><h2 align="center" >Issues</h2></ion-label>
+  </ion-item>
+  <ion-slides [options]= "{ slidesPerView: 2, spaceBetween: 0, centeredSlides: false }">
+    <ion-slide>
+      <ion-card [routerLink]="'/issues'" routerDirection="forward" class="bg-white">
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <img src="/assets/img/center/issues.png" alt=""  />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-item>
+          <ion-label><h2 align="center" >Issues</h2></ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+  

@@ -1,0 +1,97 @@
+<ion-content overflow-scroll="false" fullscreen="full">
+<app-loading  ></app-loading>
+
+<ion-content>
+
+
+  <ion-fab class="signin-close-fab-btn" horizontal="end" slot="fixed" edge>
+    <ion-fab-button routerLink="" class="fab-btn" color="danger" (click)="closeModal()">
+      <ion-icon class="signin-close-icon" ios="ios-close" md="md-close"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <!-- Backgrounds -->
+  <div style="height: 100vh;">
+ 
+    <div id="login-bg" class="container-fluid">
+     
+      <div class="bg-img"></div>
+      <div class="bg-color" style=" background: transparent"></div>
+    </div>
+
+    <!-- End Backgrounds -->
+
+    <div class="container" id="login">
+
+      <div class="row justify-content-center baby-img">
+
+        <div class="col-lg-8">
+          <div class="login">
+            <!-- <div><img src="../../assets/unnamed.png" style="width: 40%;
+                  height: 18%;
+                  border-radius: 100%;"></div> -->
+            <h3 style="" class="loginpage-login-text">Login</h3>
+            <div style="height: auto">
+              <!-- Loging form -->
+              <form [formGroup]="signinFormGroup">
+                <div class="form-group">
+                  <input (click)=" OnInputTextClicked($event)"  type="email" class="form-control" formControlName="email" aria-describedby="emailHelp"
+                    placeholder="Enter Email">
+                    <p ion-text color="danger"style="    text-align: end;" *ngIf="signinFormGroup.get('email').touched && signinFormGroup.get('email').hasError('required')">
+                      <ion-text color="danger">
+                        Invalid Email
+                      </ion-text>
+                    </p>
+          
+
+
+                </div>
+              
+
+
+                <div class="form-group">
+                  <input type="password" class="form-control" formControlName="password"
+                    placeholder="Password">
+                    <p ion-text color="danger" style="    text-align: end;" *ngIf="signinFormGroup.get('password').touched && signinFormGroup.get('password').hasError('required')">
+                      <ion-text  color="danger">
+                        Invalid password
+                      </ion-text>
+                    </p>
+          
+                </div>
+
+                <div class="form-check">
+
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+
+                  <!-- <label class="forgot-password"><a href="#">Forgot Password?</a></label> -->
+
+                </div>
+
+                <br>
+                <ion-label style="background: antiquewhite;" color="danger" position="floating" *ngIf="!_status">
+                  {{ _message}}
+                </ion-label>
+
+                <button type="submit" (click)="signin()" [disabled]="!signinFormGroup.valid" 
+                  class="btn btn-lg btn-block ">Sign in</button>
+              </form>
+              <!-- <div >
+                <label style="color:blue; background:white;">Think Zone</label>
+                
+                </div>  -->
+              <!-- End Loging form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>
+
+</ion-content>

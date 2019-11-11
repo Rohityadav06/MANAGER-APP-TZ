@@ -1,0 +1,135 @@
+:host 
+{
+    ion-content {
+        --background: url("/assets/img/EndowingSkills.JPG") no-repeat center center fixed; 
+        --background-size: cover;  
+        
+    }
+    
+    
+    
+    
+    
+}
+
+
+
+
+// .text_{
+//     color: blue;
+// }
+
+.paz {
+    position: relative;
+    z-index: 10;
+}
+
+.bg-img{
+    --width: 100%;
+    --height: 100%;
+    --max-height: 100%;
+    --margin: 0;
+    --padding: 0;
+    --background-size:100% 100%;
+    --background-repeat: no-repeat;
+    --background-size: 100%;
+}
+
+.box{
+    background-color: #000000b0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.login-button{
+    background-color: #ffffff ;
+}
+.app-title{
+    width: 130px;
+    height: 60px;
+    margin: 20px auto 8px;
+    border-radius: 10%;
+   
+    background-size: 100%;
+}
+
+.margin50{
+    margin-top: 50%;
+}
+
+//rohit styles
+
+.login-btn-align {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .login-icon{
+    font-size: xx-large;
+    padding: 3%;
+    background: antiquewhite;
+    border-radius: 54px;
+   
+  }
+
+  .login-btn{
+    --background: white;
+    color: coral;
+    text-transform: uppercase;
+    --border-radius: 38px;
+   
+      font-weight: 800;
+      letter-spacing: 2px;
+      height: 10%;
+      width: 63%;
+      transition: all 3s;
+      
+  }
+
+  .login-btn:active{
+
+      //  transform: translateY(1px);
+        // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+        --background: coral;
+        color: white;
+        transform: scale(1.1);
+    
+    }
+      
+
+        // .login-btn:active::after{
+        //     transform: scaleX(2.5) scaleY(2.5);
+        //     opacity: 0; 
+        // }
+
+
+        // login-btn::after{
+            
+        //         content: "";
+        //         display: inline-block;
+        //         height: 100%;
+        //         width: 100%;
+        //         border-radius: 100px;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         z-index: -1;
+        //         transition: all .4s; }
+              
+        
+.logo-img{
+    text-align: center;
+}
+//laptop screen
+@media(min-size:900px){
+ .login-btn{
+
+    font-size: xx-large;
+ }
+
+
+}

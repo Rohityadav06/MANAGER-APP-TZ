@@ -1,0 +1,88 @@
+<div *ngIf="showSplash" class="splash">
+  <div class="loading-screen">
+
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+    
+    
+    </div>
+</div>
+
+
+<ion-app>
+  
+  <ion-split-pane class="bar-clear">
+    <ion-menu>
+      <ion-header class="menu-header">
+        <!--
+        <ion-col>
+            <img src="/assets/img/center/menu-bg.jpg" alt="" class="menu-bg" />
+        </ion-col>
+      -->
+
+       <ion-toolbar style="height: 100%;" class=" menu-background menu-header-toolbar">
+          <ion-item lines="none" class="menu-header-item" >
+            <ion-avatar slot="start" class="user-avatar user-img">
+              <img src="assets/img/user.png">
+            </ion-avatar>
+            <ion-label>
+              <ion-text >
+                <h2 style="color: black;"><strong>{{ _username }}</strong></h2>
+              </ion-text>
+              <ion-text>
+                <h3>
+                  Manager
+                </h3>
+              </ion-text>
+          
+              <!--  <ion-button color="danger" (click)="logout()" no-margin>
+                  <ion-icon name="log-out"></ion-icon>
+                  Log out
+                </ion-button> -->
+          
+            </ion-label>
+          </ion-item>
+
+        </ion-toolbar> 
+      </ion-header>
+
+      <ion-content class="menu-ion-content">
+        <ion-list>
+          <!-- <ion-list-header color="dark">
+            <ion-label>Menu</ion-label>
+          </ion-list-header> -->
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item  class="menu-list-item"
+             [routerLink]="[p.url]" >
+              <ion-icon class="menu-icon"  slot="start" [name]="p.icon"></ion-icon>
+              <ion-label >
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+           
+          </ion-menu-toggle>
+   
+        </ion-list>
+       
+      </ion-content>
+      <ion-footer class="menu-footer">
+        <ion-item>
+            
+          <ion-button  (click)="logout()" class="logout-btn" color="danger" slot="end" expand="block">
+              <ion-icon name="log-out"></ion-icon>
+              Log Out
+            </ion-button> 
+          </ion-item>
+   
+        </ion-footer>
+      
+    </ion-menu>
+  
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,148 @@
+<!-- <ion-header>
+  <ion-toolbar color="gray">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light">Centers
+        <ion-text color="light">
+          <ion-text color="light" class="fw700">
+            {{ _username }}<br>
+            <span class="text10">Centers [ {{ current_date }} ]</span>
+          </ion-text>
+        </ion-text>
+      
+    </ion-title>
+     <ion-buttons slot="end">
+      <ion-button shape="round" color="medium" (click)="notifications('hi')">
+        <ion-icon  color="light" class="message" name="paper-plane"></ion-icon>
+      <ion-badge color="dark" slot="end">2</ion-badge>
+      </ion-button>
+    </ion-buttons> 
+  </ion-toolbar>
+   <ion-toolbar color="dark">
+    <ion-searchbar [(ngModel)]="searchKey"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" color="medium" (click)="searchFilter()">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar> 
+</ion-header> -->
+
+
+<ion-header>
+  <ion-toolbar class="home-toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button class="menu-btn"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="home-header-title">Home</ion-title>
+    <ion-icon (click)="notifications('hi')" name="notifications-outline" class="icon-sty home-header-left-icon"
+      slot="end"></ion-icon>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content class="bg-white">
+  <ion-item class="home-heading-list">
+    <ion-label>
+      <h2 align="center" style="font-family:Trebuchet MS;">Centers Allotted ({{ centers.length }})</h2>
+    </ion-label>
+  </ion-item>
+
+  <!--Horizontal slide-->
+  <!--<ion-slides [options]= "{ slidesPerView: 1.6, spaceBetween: 5, centeredSlides: false }">
+    <ion-slide *ngFor = "let center of centers; let i = index">
+      <ion-card (click)="centerButtonClicked(center)" routerDirection="forward" class="bg-white">
+        <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <img src="/assets/img/center/{{i+1}}.jpg" alt=""  />
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+        <ion-item>
+          <ion-icon name="easel" slot="start"></ion-icon>
+          <ion-label>{{ center.centername }}</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>-->
+
+  <!--Centers will come in Vertical scroll-->
+
+  <!-- slide effect -->
+  <!-- <ion-slides  *ngFor = "let center of centers; let i = index" (click)="centerButtonClicked(center)" routerDirection="forward" class="bg-white">
+    <ion-slide>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <img src="/assets/img/center/{{i+1}}.jpg" alt=""  />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-label class="center-title">{{ center.centername }}</ion-label>
+        <br>
+        <ion-label class="center-subtitle">{{ center.block }} {{ center.district }}</ion-label>
+        <br>
+      </ion-card>
+    </ion-slide>
+  </ion-slides> -->
+
+  <ion-card  *ngFor="let center of centers; let i = index" (click)="centerButtonClicked(center)"
+    routerDirection="forward" class="bg-white home-grid-card">
+    <ion-card-content>
+      <ion-grid >
+        <ion-row>
+          <ion-col  class="home-card-img-col" >
+            <img class="home-card-img" src="/assets/img/center/{{i+1}}.jpg" alt="" />
+          </ion-col>
+          <ion-col>
+            <ion-list class="home-card-list" lines="none">
+              <ion-item class=" home-card-item ">
+                <ion-row>
+                  <ion-col size="2">
+                    <ion-icon class="home-card-icons" ios="ios-home" md="md-home"></ion-icon>
+                  </ion-col>
+                  <ion-col   size="10">
+                    <h2 class="home-card-text home-card-text-heading" >{{ center.centername }}</h2>
+                  </ion-col>
+                </ion-row>
+
+
+              </ion-item>
+
+
+
+
+
+
+
+              <ion-item class="home-card-text-subtitle" style="border-bottom: none !important;">
+                  <ion-row>
+                      <ion-col size="2">  <ion-icon class="home-card-icons" ios="ios-navigate" md="md-navigate">
+
+                      </ion-icon>
+                    </ion-col>
+                      <ion-col size="10"><h3 style="    color: gray;" class="home-card-text">{{ center.block }}</h3></ion-col>
+                    </ion-row>
+           
+           
+              
+                
+              </ion-item>
+            </ion-list>
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <!-- <popmenu></popmenu> -->
+</ion-content>

@@ -1,0 +1,70 @@
+
+<ion-header>
+  <ion-toolbar color="gray">
+      <ion-buttons slot="start">
+          <ion-back-button color="light"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Messages</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+<!--(click)="openMessage(res)"  -->
+<ion-content>
+
+<app-loading *ngIf="loading"></app-loading>
+
+  <ion-card color="light" >
+    
+    <ion-card-content>
+        <ion-item  class="unread-message">
+            <ion-icon slot="start" name="mail" ></ion-icon>Unread Messages
+          </ion-item>
+          
+          
+         
+            <accordion  [closeOthers]="true" [isAnimated]="true"  *ngFor = "let res of respons; let i=index;"  class="bg-white" no-margin>
+                <accordion-group *ngIf="res.status != 'read' " (click)="updateMessageStatus(res)"
+                   heading= {{res.title}}>    
+                  {{ res.message }}
+                </accordion-group>
+                
+              </accordion>
+
+
+
+
+
+
+
+
+
+
+        
+          <ion-item  class="unread-message">
+            <ion-icon slot="start" name="mail-open" ></ion-icon>Read Messages
+          </ion-item>
+          
+          
+         
+            <accordion  [isAnimated]="true"  *ngFor = "let res of respons; let i=index;" [closeOthers]="true"   class="bg-white" no-margin>
+                <accordion-group class="accordionclass" [isOpen]="i==activeIndex" *ngIf="res.status == 'read'" (click)="toggleClass(i)"
+                   heading= {{res.title}}>    
+                  {{ res.message }}
+                </accordion-group>
+                
+              </accordion>
+
+             
+
+            
+
+          </ion-card-content>
+
+
+        
+        
+          
+  </ion-card>
+  
+</ion-content>
+
